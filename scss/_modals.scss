@@ -1,0 +1,161 @@
+// Modals
+.modal-wrap {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background: rgb(0 0 0 / 81%);
+  .close-Item {
+    position: absolute;
+    top: -10%;
+    right: 0;
+    font-size: 2em;
+  }
+  .modal__img .tittle_2 {
+    position: absolute;
+    margin: 8px;
+  }
+  .modal-wrap .modal-wrap_info {
+    background: red;
+  }
+
+  .modal {
+    position: relative;
+    width: 75%;
+    height: 80%;
+
+    .modal__img-wrap {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+      scrollbar-color: #91626267 #ffffff00;
+
+      background: #000;
+
+      .modal__img {
+        height: 20%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease-in-out;
+}
+.modal_close {
+  // animation: modalOpen 2s linear ;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+///info--------------------------------
+.modal__info {
+  display: flex;
+
+  overflow-x: scroll;
+
+  .close-Item {
+    position: fixed;
+    top: 7%;
+    z-index: 2;
+    left: 87%;
+  }
+
+  scrollbar-color: #91626267 #ffffff00;
+  .modal__info-content {
+    display: flex;
+
+    .modal__info-img {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      margin: 2%;
+
+      .tittle_2 {
+        position: absolute;
+        font-size: 2em;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        margin: 0.3em;
+      }
+      img {
+        min-width: 50%;
+      }
+    }
+  }
+}
+//pop-up-------------------------------
+
+.container {
+  display: none;
+  position: fixed;
+
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  background: #0000008a;
+  animation:bgPopup 7s ease infinite;
+
+  .pop-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    span {
+      position: absolute;
+      right: 5%;
+      top: 6%;
+
+      z-index: 3;
+      // color: ;
+      font-size: 4em;
+      margin-left: 2%;
+    }
+    img {
+      border: 0.5em solid rgb(208 184 172 / 45%);
+      border-radius: 1em;
+      max-width: 80%;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@keyframes bgPopup {
+  0% {
+    background: #0000008a;
+  }
+  
+  
+75%{
+
+  background:#0a0303;
+}
+
+  100% {
+    background: #0000008a;
+  }
+  
+}

@@ -1,0 +1,24 @@
+
+@mixin title($size , ){
+    font-size: $size;
+    font-family: "Pattaya", sans-serif;
+    color:$title-color;
+    line-height: 1em;
+}
+
+@mixin displayFlexCenter(){
+    display: flex;
+    justify-content: center;
+    align-items:center
+}
+@mixin textPrice($fsize){
+    font-family: "Alumni Sans", sans-serif;
+    font-weight: 400;
+    font-size: $fsize;
+}
+@mixin positionZero(){
+    top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
